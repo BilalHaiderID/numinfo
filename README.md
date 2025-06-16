@@ -80,3 +80,22 @@ python3 numinfo.py -r 03441234567-70
 ---
 
 <div align="center"> <sub>Built with ❤️ in Pakistan</sub> </div>
+
+
+
+## 👨‍💻 Author
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/BilalHaiderID">
+        <img src="https://avatars.githubusercontent.com/u/BilalHaiderID?s=100" width="100px;" alt="Bilal Haider ID"/>
+        <br />
+        <sub><b>Bilal Haider ID</b></sub>
+      </a>
+      <br />
+      <a href="https://github.com/BilalHaiderID" title="GitHub">👨‍💻</a>
+      <a href="https://X.com/bilalhaider_id" title="X">🐦</a>
+    </td>
+  </tr>
+</table>
