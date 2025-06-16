@@ -68,8 +68,7 @@ python3 numinfo.py -r 03441234567-70
 
 - **Name:** Bilal Haider ID  
 - **GitHub:** [@bilalhaiderid](https://github.com/BilalHaiderID)  
-- **Email:** bilalhaiderid@gmail.com 
-- **LinkedIn:** [linkedin.com/in/BilalHaiderID](https://linkedin.com/in/BilalHaiderID)
+- **Email:** bilalhaiderid@gmail.com
 - **Location:** Pakistan  
 - **About:** Passionate about open-source, automation, ethical hacking, and building tools that make life easier for developers and cybersecurity enthusiasts.
 
