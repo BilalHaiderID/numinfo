@@ -79,6 +79,4 @@ python3 numinfo.py -r 03441234567-70
 
 ---
 
-## 📜 License
-
-MIT License — Use at your own risk.
+<div align="center"> <sub>Built with ❤️ in Pakistan</sub> </div>
