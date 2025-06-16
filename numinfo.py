@@ -20,7 +20,7 @@ def numinfo(mobile_number):
         if not rows:print(f"[✘] No data found for: {mobile_number}"); return
         for tr in rows:
             tds = tr.find_all('td')
-            if len(tds) >= 4:t = [td.text.strip() for td in tds]; print(f"""[+] Number  : {t[0]}\n[+] Name    : {t[1]}\n[+] CNIC    : {t[2]}\n[+] Address : {t[3]}\n{'-'*40}""")
+            if len(tds) >= 4:t = [td.text.strip() for td in tds]; print(f"""   [+] Number  : {t[0]}\n   [+] Name    : {t[1]}\n   [+] CNIC    : {t[2]}\n   [+] Address : {t[3]}\n{'-'*40}""")
     except Exception as e:print(f"[!] Error for {mobile_number}: {e}")
 
 def expand_range(rng):
