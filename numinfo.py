@@ -14,7 +14,7 @@ def numinfo(mobile_number):
     try:
         session = requests.Session()
         headers = {'User-Agent': 'Mozilla/5.0','Content-Type': 'application/x-www-form-urlencoded','Referer': 'https://minahilsimsdata.info/search.php'}
-        response = session.post("https://minahilsimsdata.info/search.php",data={'mobileNumber': mobile_number, 'submit': ''},headers=headers)
+        response = session.post("https://minahilsimsdata.pro/search.php",data={'mobileNumber': mobile_number, 'submit': ''},headers=headers)
         soup = BeautifulSoup(response.text, 'html.parser')
         rows = soup.find_all('tr')[1:]
         if not rows:print(f"[✘] No data found for: {mobile_number}"); return
