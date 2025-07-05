@@ -2,7 +2,7 @@
 # SIM Info Finder 🔍
 
 A simple CLI tool to fetch PAK SIM owner details using mobile numbers or number ranges.
-Uses `https://minahilsimsdata.info` as the data source.
+Uses `https://minahilsimsdata.pro` as the data source.
 
 ---
 
