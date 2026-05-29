@@ -1,7 +1,7 @@
 
 #!/usr/bin/env python3
 # Author      : Bilal Haider ID (github.com/BilalHaiderID)
-# Version     : 0.0.1
+# Version     : 0.0.2
 # Description : CLI tool to fetch PAK SIM owner info using phone numbers or ranges
 # DISCLAIMER  : This tool is for educational and research purposes only.
 #               The author is not responsible for any misuse or illegal activity.
@@ -13,14 +13,19 @@ from bs4 import BeautifulSoup
 def numinfo(mobile_number):
     try:
         session = requests.Session()
-        headers = {'User-Agent': 'Mozilla/5.0','Content-Type': 'application/x-www-form-urlencoded','Referer': 'https://minahilsimsdata.info/search.php'}
-        response = session.post("https://minahilsimsdata.pro/search.php",data={'mobileNumber': mobile_number, 'submit': ''},headers=headers)
+        headers = {'User-Agent': 'Mozilla/5.0','Content-Type': 'application/x-www-form-urlencoded','Referer': 'https://google.com'}
+        response = session.get(f"https://datacorporation.com.pk/sim-owner-details/?sim_info_mobile={mobile_number}")
         soup = BeautifulSoup(response.text, 'html.parser')
-        rows = soup.find_all('tr')[1:]
-        if not rows:print(f"[✘] No data found for: {mobile_number}"); return
-        for tr in rows:
-            tds = tr.find_all('td')
-            if len(tds) >= 4:t = [td.text.strip() for td in tds]; print(f"""   [+] Number  : {t[0]}\n   [+] Name    : {t[1]}\n   [+] CNIC    : {t[2]}\n   [+] Address : {t[3]}\n{'-'*40}""")
+        card_items = soup.find_all("div", class_="sim-info-card-item")
+        if len(card_items) != 0:
+            for item in card_items:
+                label = item.find("div", class_="sim-info-card-label").get_text(strip=True)
+                value = item.find("div", class_="sim-info-card-value").get_text(strip=True)
+                if str(value.strip()) != "":
+                    print(f"   [+] {label}  : {value}")
+        else:
+            print(f"   [x] data not found for : {mobile_number}")
+    except KeyboardInterrupt:exit()
     except Exception as e:print(f"[!] Error for {mobile_number}: {e}")
 
 def expand_range(rng):
